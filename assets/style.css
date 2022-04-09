@@ -1,0 +1,209 @@
+/*General styles */
+:root {
+  --blue: #21abca;
+  --golden: #f49c1e;
+  --pink: #e95b9e;
+  --off-white: #f4f4f4;
+  --green: #b7d158;
+  --grey: #cac8e4;
+}
+
+main *,
+main *::before,
+main *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  color: black;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: Roboto;
+  font-weight: 300;
+  font-style: normal;
+  color: black;
+  font-size: 42px;
+}
+
+h2 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 2.5rem;
+}
+
+main p {
+  font-size: 1rem;
+  color: black;
+  font-family: inherit;
+  line-height: 1.625rem;
+  font-weight: 400;
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  border: none;
+}
+
+.primary__btn {
+  font-weight: bold;
+  border-radius: 28px;
+  background-color: var(--blue);
+  padding: 10px 18px;
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 1.5rem;
+}
+.btn--d {
+  display: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-blue {
+  color: var(--blue);
+}
+.text-golden {
+  color: var(--golden);
+}
+.text-pink {
+  color: var(--pink);
+}
+.text-grey {
+  color: var(--grey);
+}
+.bg--pink {
+  background-color: var(--pink);
+}
+.bg--grey {
+  background-color: var(--grey);
+}
+.bg--green {
+  background-color: var(--green);
+}
+.bg-blue {
+  background-color: var(--blue);
+}
+.bg--white {
+  background-color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  max-width: 352px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section__title {
+  font-size: 45px;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Abril Fatface", cursive;
+  line-height: 1;
+  margin: 0.8em 0;
+}
+.section__subtitle {
+  font-size: 14px;
+  max-width: 352px;
+  margin: 1rem auto;
+}
+
+/* Hero Section */
+
+.hero {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.hero__content {
+  order: 2;
+}
+
+.hero .hero__title {
+  font-family: "Abril Fatface", cursive;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+  margin-top: -30px;
+}
+.hero__subtitle {
+  font-weight: bold;
+  color: white;
+}
+
+/*-- -hero video--*/
+
+.hero .hero__video {
+  font-size: 0;
+}
+.hero .hero__video video {
+  max-width: 100%;
+  width: 100%;
+}
+
+/*Responsive styles*/
+
+@media (min-width: 768px) {
+  .section__subtitle {
+    max-width: 610px;
+    margin: 1rem auto;
+    font-size: 16px;
+  }
+  .btn--m {
+    display: none;
+  }
+  .btn--d {
+    display: block;
+  }
+  .primary__btn {
+    font-size: 16px;
+    padding: 12px 22px;
+  }
+
+  .container {
+    max-width: 1164px;
+    margin: 0 16px;
+    margin: 0 auto;
+  }
+  .hero {
+    background-image: url("./images/herobg-d.png");
+    padding: 7rem 0;
+  }
+  .hero .hero__title {
+    font-size: 6rem;
+    line-height: 0.85;
+  }
+}
