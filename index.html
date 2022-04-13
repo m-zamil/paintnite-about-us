@@ -7,7 +7,7 @@
     <title>About Us | PaintNite.com</title>
 
     <meta name="description" content="Hi, we’re Yaymaker. We were born as Paint Nite, holding our first event in a Boston bar during a blackout in 2012. At the event..." />
-    <link rel="icon" type="image/x-icon" href="./assets/images/yay-icon.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/yay-icon.jpg" />
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://www.paintnite.com/about-us/" />
@@ -35,20 +35,67 @@
       <div class="body__wrapper">
         <section class="hero">
           <div class="container">
-            <div class="hero__content bg--green">
-              <h1 class="hero__title">PaintNite.who?</h1>
-              <p class="hero__subtitle">Hey friends! Welcome to the party that is PaintNite.com, the original paint night experience.</p>
-              <p class="hero__subtitle">While you’re here, kick back, grab a drink, and let’s get to know each other a little better. We’ll go first...</p>
+            <div class="hero__wrapper bg--green">
+              <div class="hero__content bg--green">
+                <div class="hero__content__wrapper">
+                  <h1 class="hero__title">PaintNite.who?</h1>
+                  <p class="hero__subtitle">Hey friends! Welcome to the party that is PaintNite.com, the original paint night experience.</p>
+                  <p class="hero__subtitle">While you’re here, kick back, grab a drink, and let’s get to know each other a little better. We’ll go first...</p>
+                </div>
+              </div>
+              <div class="hero__video">
+                <video loop autoplay muted width="700px">
+                  <source src="./assets/video/header-image-motion.mp4" type="video/mp4" />
+                  Sorry, your browser doesn't support embedded videos.
+                </video>
+              </div>
             </div>
-            <div class="hero__video">
-              <video autoplay="autoplay" controls width="700px" id="vid">
-                <source src="./assets/video/header-image-motion.mp4" type="video/mp4" />
-                Sorry, your browser doesn't support embedded videos.
-              </video>
+            <div class="hero__nav">
+              <ul>
+                <li><a href="#">What is Paint Nite.com</a></li>
+                <li><a href="#">Our vibe</a></li>
+                <li><a href="#">Paint: by the numbers</a></li>
+                <li><a href="#">We’re different</a></li>
+                <li><a href="#">The people</a></li>
+              </ul>
             </div>
           </div>
         </section>
+        <section class="what">
+          <div class="container">
+            <div class="what__images">
+              <img src="./assets/images/whatisPN.png" alt="" />
+            </div>
+            <div class="what__content">
+              <img class="what__top-image" src="./assets/images/top-whatPN.png" alt="" />
+              <h2 class="section__title">what is <br />PaintNite.com?</h2>
+              <p class="section__subtitle">Our events are run by <span class="bold text-pink u">local artists</span> with the same goal as you: to get out, mingle, and have a laugh. And although sip and paint parties are our bread and butter, you’ll find muchmore on <span class="bold text-pink u">our calendar.</span></p>
+              <p class="section__subtitle">Why sip? Well, the ole liquid courage is great when trying something new and adds to the fun. Still, many people enjoy themselves withoutit and keep coming back for more.</p>
+              <p class="section__subtitle">Oh, and just a heads up, this is <span class="bold italic">not</span> an art class. Sure, you’ll learn a few tricks with step-by-step instructions, but this is far from serious. We’re in the fun business!</p>
+            </div>
+          </div>
+        </section>
+        <section class="vibe">
+          <div class="container">
+            <div class="vibe__content">
+              <h2 class="section__title">the vibe: <br />who’s it for?</h2>
+              <p class="section__subtitle">Anyone looking to get out and have a great time, not take themselves too seriously, and do something different. Whether you’re planning a bachelorette party, date night, birthday party, or some me-time.</p>
+              <p class="section__subtitle">These experiences aren’t pigeonholed. We get all the pigeons, so to speak! Lifelong artists, first-timers, kids, grandparents, male, female… and everyone in between.</p>
+            </div>
+            <div class="vibe__image boxes">
+              <div class="vibe__image__wrapper">
+                <img class="box box-1" data-s="40" src="./assets/images/Left-Image.png" alt="" />
+                <img class="box box-2" data-s="70" src="./assets/images/Middle-Image.png" alt="" />
+                <img class="box box-3" data-s="10" src="./assets/images/Right-Image.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style="height: 500px; background-color: aqua"></section>
       </div>
     </main>
+    <script src="https://unpkg.co/gsap/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap/dist/ScrollTrigger.min.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>

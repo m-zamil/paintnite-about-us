@@ -77,6 +77,12 @@ img {
 .bold {
   font-weight: bold;
 }
+.italic {
+  font-style: italic;
+}
+.u {
+  text-decoration: underline;
+}
 
 .text-blue {
   color: var(--blue);
@@ -134,12 +140,13 @@ img {
 
 .hero {
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.hero .container {
+  max-width: 100%;
+  padding: 0;
 }
 
-.hero .container {
+.hero__wrapper {
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -158,10 +165,22 @@ img {
   line-height: 1;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
   margin-top: -30px;
+  margin-bottom: 40px;
+  z-index: 1;
 }
 .hero__subtitle {
+  font-size: 14px;
   font-weight: bold;
   color: white;
+  line-height: 1.3;
+  max-width: 425px;
+  margin: 0 auto 22px;
+  padding: 0 32px;
+}
+.hero__subtitle:last-child {
+  margin-bottom: 0;
+  border-bottom: 1px solid #fef13a;
+  padding-bottom: 32px;
 }
 
 /*-- -hero video--*/
@@ -171,12 +190,149 @@ img {
 }
 .hero .hero__video video {
   max-width: 100%;
+  max-height: 400px;
   width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+/*-- -hero nav--*/
+
+.hero__nav {
+  background-color: var(--green);
+  padding: 2rem 0 5rem;
 }
 
-/*Responsive styles*/
+.hero__nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+  padding-left: 0;
+  margin: 0;
+  max-width: 352px;
+  margin: 0 auto;
+}
 
-@media (min-width: 768px) {
+.hero__nav li::before {
+  content: "|";
+  color: white;
+}
+.hero__nav li:first-child::before {
+  content: "";
+}
+.hero__nav li a {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: underline;
+  padding: 0 8px;
+  transition: all 300ms;
+}
+.hero__nav a:hover {
+  color: black;
+}
+
+/*-- What is PN section --*/
+.what {
+  overflow-x: clip;
+  padding-bottom: 2rem;
+}
+.what .container {
+  position: relative;
+  max-width: 380px;
+}
+.what__top-image {
+  position: absolute;
+  width: 200px;
+  right: -52px;
+  top: -50px;
+}
+.what__images {
+  display: none;
+}
+.what .section__title {
+  text-align: left;
+  line-height: 1.3;
+}
+.what .section__subtitle {
+  line-height: 1.3;
+}
+/*-- The vibe section --*/
+.vibe {
+  text-align: right;
+  position: relative;
+}
+.vibe::after {
+  content: "";
+  position: absolute;
+  background-color: var(--off-white);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 15%;
+  z-index: -2;
+}
+.vibe .container::after {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  z-index: -1;
+  background-image: url(./images/pink-paint-stroke-mb.png);
+  background-size: cover;
+  width: 74px;
+  height: 183px;
+  background-repeat: no-repeat;
+}
+.vibe .section__title,
+.vibe .section__subtitle {
+  text-align: right;
+}
+
+.vibe .section__subtitle {
+  line-height: 1.3;
+}
+.vibe__image__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.vibe__image__wrapper img {
+  width: 200px;
+  width: 30%;
+}
+.vibe__image__wrapper img:last-child {
+  margin-right: 0;
+}
+.vibe__image {
+  margin-top: 96px;
+  position: relative;
+}
+
+/*-- Responsive styles --*/
+
+@media (min-width: 480px) {
+  .hero .hero__title {
+    font-size: 3.5rem;
+    margin-top: -35px;
+  }
+  .vibe .container::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: -1;
+    background-image: url(./images/pink-paint-stroke-mb.png);
+    background-size: cover;
+    width: 100px;
+    height: 247px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 960px) {
   .section__subtitle {
     max-width: 610px;
     margin: 1rem auto;
@@ -198,12 +354,157 @@ img {
     margin: 0 16px;
     margin: 0 auto;
   }
-  .hero {
-    background-image: url("./images/herobg-d.png");
-    padding: 7rem 0;
+  /* Hero section */
+
+  .hero .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .hero__wrapper {
+    flex-direction: row;
+  }
+  .hero__content__wrapper {
+    max-width: 582px;
+    margin-left: auto;
+  }
+  .hero__content {
+    order: 1;
+    flex: 1;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    position: relative;
+  }
+  .hero__content::after {
+    content: "";
+    display: block;
+    height: 110px;
+    position: absolute;
+    bottom: -75px;
+    width: 100%;
+    background-color: var(--green);
   }
   .hero .hero__title {
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 0.85;
+    margin-top: 32px;
+    margin-bottom: 60px;
+    text-align: left;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .hero__subtitle {
+    padding: 0;
+    max-width: 350px;
+    font-size: 18px;
+  }
+  .hero__subtitle:last-child {
+    margin-bottom: 22px;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .hero .hero__video {
+    order: 2;
+    flex: 1;
+    width: 50%;
+  }
+  .hero .hero__video video {
+    max-height: 505px;
+    height: 100%;
+  }
+  .hero__nav {
+    background-color: transparent;
+    padding: 0;
+    margin-top: -4rem;
+  }
+  .hero__nav ul {
+    max-width: 1164px;
+    margin: 0 auto;
+  }
+  .hero__nav li a {
+    padding: 0 2rem;
+  }
+  /* what is PN section*/
+  .what {
+    background-image: url(./images/ellipse.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding-bottom: 0;
+  }
+  .what .container {
+    max-width: 1164px;
+    display: flex;
+    padding-top: 72px;
+    background-image: url(./images/Purple-Paint-Stroke.png);
+    background-position: -3% 115%;
+    background-repeat: no-repeat;
+    background-size: 450px;
+    padding-bottom: 24px;
+  }
+  .what__top-image {
+    display: none;
+  }
+
+  .what__images {
+    display: block;
+    width: 50%;
+  }
+  .what__content {
+    flex: 1;
+    margin-left: 32px;
+    padding-top: 75px;
+  }
+  .what .section__title {
+    margin-bottom: 18px;
+  }
+  .what .section__subtitle {
+    max-width: 352px;
+    margin-left: 0;
+  }
+  /* Vibe section */
+  .vibe {
+    margin-top: 60px;
+  }
+
+  .vibe::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: initial;
+    left: 0;
+    right: initial;
+    bottom: -70px;
+    z-index: -2;
+    width: 230px;
+    height: 330px;
+    background-image: url("./images/ellipse-1.png");
+    background-repeat: no-repeat;
+  }
+  .vibe .container {
+    display: flex;
+    align-items: center;
+  }
+  .vibe .container::after {
+    content: "";
+    right: 0;
+    left: initial;
+    top: -25px;
+    position: absolute;
+    z-index: -1;
+    background-image: url("./images/Pink-Paint-Stroke.png");
+    background-size: cover;
+    width: 186px;
+    height: 457px;
+    background-repeat: no-repeat;
+  }
+  .vibe__content {
+    flex: 1;
+    max-width: 340px;
+    margin: 0 10%;
+  }
+  .vibe__image {
+    flex: 1.2;
   }
 }
