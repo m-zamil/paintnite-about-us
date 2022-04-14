@@ -39,3 +39,12 @@ if(screen.width <=960){
 })
 
 
+new Glide(".glide", {
+  type: "carousel",
+  gap: 20,
+  autoplay: 4000,
+  hoverpause: true,
+  keyboard: true,
+  perView: 1.2,
+  focusAt: "center",
+}).mount();
