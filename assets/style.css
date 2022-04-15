@@ -835,6 +835,9 @@ img {
     top: -25px;
   }
   /*-- Where did yaymaker go --*/
+  .whereym {
+    margin-top: 80px;
+  }
 
   .whereym .container {
     padding-bottom: 22px;
