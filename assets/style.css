@@ -1,4 +1,5 @@
 /*General styles */
+
 :root {
   --blue: #21abca;
   --golden: #f49c1e;
@@ -8,10 +9,8 @@
   --grey: #cac8e4;
 }
 
-main *,
-main *::before,
-main *::after {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,7 +22,11 @@ body {
   margin: 0;
   padding: 0;
 }
-
+main *,
+main *::before,
+main *::after {
+  box-sizing: border-box;
+}
 h1 {
   font-family: Roboto;
   font-weight: 300;
@@ -156,6 +159,8 @@ img {
 }
 .hero__content {
   order: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .hero .hero__title {
@@ -325,14 +330,13 @@ img {
 .reason__card {
   border-radius: 20px;
   color: white;
-  max-width: 404px;
   margin: 2rem auto 0;
-  min-height: 445px;
+  max-width: 412px;
+}
+.reason__card__image {
+  text-align: center;
 }
 
-.reason__card__image {
-  padding: 0 20%;
-}
 .reason__card--img {
   margin-top: -2rem;
 }
@@ -376,9 +380,6 @@ img {
 .reason__card__text a:hover {
   color: white;
 }
-.reason__card__title--outline {
-  display: none;
-}
 
 /*-- The numbers --*/
 .numbers__card__wrapper {
@@ -390,6 +391,9 @@ img {
 .numbers__card {
   max-width: 250px;
   margin-bottom: 1rem;
+}
+.numbers__card__image {
+  width: 220px;
 }
 
 .numbers__card__title {
@@ -427,7 +431,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 44%;
+  height: 500px;
   z-index: -2;
 }
 
@@ -456,12 +460,14 @@ img {
   background-image: url("./images/whereYM-bg.png");
   background-position: center center;
   background-size: cover;
+  margin-top: 32px;
 }
 
 .whereym .container {
   position: relative;
   overflow-x: clip;
-  max-width: 525px;
+  max-width: 550px;
+  padding-bottom: 30px;
 }
 .whereym .container::after {
   content: "";
@@ -469,21 +475,25 @@ img {
   position: absolute;
   bottom: 0;
   right: 0px;
+  left: 285px;
   z-index: 0;
   font-size: 0;
   z-index: 1;
-  width: 250px;
-  height: 344px;
+  width: 254px;
+  height: 350px;
   background-image: url("./images/whereYM.png");
   background-size: cover;
-  opacity: 0.4;
+  background-size: 100%;
 }
+
 .whereym .section__title {
   text-align: left;
   color: white;
   max-width: 300px;
   z-index: 2;
   position: relative;
+  margin-top: 14px;
+  margin-bottom: 28px;
 }
 .whereym .section__subtitle {
   text-align: left;
@@ -496,22 +506,18 @@ img {
 .whereym .primary__btn {
   background-color: white;
   color: var(--blue);
-  margin-top: 1rem;
+  margin-top: 12px;
   z-index: 2;
   position: relative;
 }
 /*-- Responsive styles --*/
-@media (min-width: 340px) {
-  .reason__card {
-    min-height: 492px;
-  }
-}
+
 @media (min-width: 420px) {
-  .reason__card {
-    min-height: 537px;
-  }
-  .whereym .container::after {
-    opacity: 0.7;
+  .reason__card__title {
+    font-size: 1.85rem;
+    font-size: 2rem;
+    margin-top: -44px;
+    margin-bottom: 18px;
   }
 }
 
@@ -531,14 +537,6 @@ img {
     width: 100px;
     height: 247px;
     background-repeat: no-repeat;
-  }
-  .reason__card__title {
-    font-size: 1.85rem;
-    margin-top: -44px;
-    margin-bottom: 18px;
-  }
-  .whereym .container::after {
-    opacity: 1;
   }
 }
 
@@ -627,6 +625,8 @@ img {
     background-color: transparent;
     padding: 0;
     margin-top: -4rem;
+    position: relative;
+    z-index: 3;
   }
   .hero__nav ul {
     max-width: 1164px;
@@ -660,6 +660,8 @@ img {
   .what__images {
     display: block;
     width: 50%;
+    position: relative;
+    z-index: 3;
   }
   .what__content {
     flex: 1;
@@ -679,14 +681,10 @@ img {
   }
 
   .vibe::after {
-    content: "";
-    position: absolute;
     background-color: transparent;
     top: initial;
-    left: 0;
     right: initial;
     bottom: -70px;
-    z-index: -2;
     width: 230px;
     height: 330px;
     background-image: url("./images/ellipse-1.png");
@@ -706,7 +704,7 @@ img {
     background-image: url("./images/Pink-Paint-Stroke.png");
     background-size: cover;
     width: 186px;
-    height: 457px;
+    height: 456px;
     background-repeat: no-repeat;
   }
   .vibe__content {
@@ -728,28 +726,28 @@ img {
   }
   .reason__card {
     display: flex;
-    justify-content: space-evenly;
     max-width: 100%;
     align-items: center;
+    justify-content: center;
     margin-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
-    min-height: 380px;
   }
 
   .reason__card__image {
     padding: 0 1rem;
-    width: 30%;
+    width: 50%;
     text-align: center;
   }
   .reason__card--img {
-    max-width: 280px;
     margin-bottom: -2.5rem;
+    max-width: 450px;
+    margin-left: auto;
   }
   .reason__card__content {
     width: 50%;
-    padding: 0 34px;
-    align-self: baseline;
+    padding: 0 34px 0 0;
+    align-self: center;
     margin-top: -3px;
   }
   .reason__card__title {
@@ -757,38 +755,15 @@ img {
     font-size: 2.4rem;
     margin-top: -6px;
     min-width: 420px;
-  }
-  .reason__card__title--outline {
-    font-size: 2.4rem;
-    font-weight: bold;
-    display: block;
-    -webkit-text-fill-color: var(--pink);
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
-    color: var(--pink);
-    line-height: 34px;
-    min-width: 420px;
-  }
-  .reason__card.card-2 .reason__card__title--outline {
-    -webkit-text-fill-color: #f79d31;
-  }
-  .reason__card.card-3 .reason__card__title--outline {
-    -webkit-text-fill-color: #b7d158;
-  }
-  .reason__card.card-4 .reason__card__title--outline {
-    -webkit-text-fill-color: #078e8e;
-  }
-  .reason__card.card-5 .reason__card__title--outline {
-    -webkit-text-fill-color: #cac7e4;
-  }
-  .reason__card.card-6 .reason__card__title--outline {
-    -webkit-text-fill-color: #00abc8;
+    max-width: 420px;
   }
 
   .reason__card__text {
     font-size: 16px;
     padding-bottom: 0;
+    max-width: 400px;
   }
+
   .reasons .glide__bullets {
     bottom: 5em;
   }
@@ -797,6 +772,9 @@ img {
     height: 13px;
   }
   /*-- The numbers --*/
+  .thenumbers {
+    background-color: var(--off-white);
+  }
   .thenumbers .section__title {
     margin-bottom: 50px;
   }
@@ -809,6 +787,7 @@ img {
   /*--Who started --*/
   .started .section__title {
     margin-bottom: 80px;
+    margin-top: 80px;
   }
   .started::after {
     display: none;
@@ -820,7 +799,7 @@ img {
   }
   .started__image {
     width: 50%;
-    max-width: 400px;
+    max-width: 550px;
     padding: 0;
   }
   .started__content {
@@ -840,11 +819,15 @@ img {
   }
 
   .whereym .container {
-    padding-bottom: 22px;
+    padding-bottom: 32px;
     max-width: 960px;
   }
   .whereym .container::after {
     right: 0;
+    left: auto;
+    width: 292px;
+    height: 330px;
+    background-size: 100%;
   }
   .whereym .section__title {
     max-width: 100%;

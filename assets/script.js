@@ -14,7 +14,7 @@ if(screen.width <=960){
     defaults:{duration: 1, ease:'none'}
   })
     .to(box, {
-    y: (i, target) => -1 * target.dataset.s,
+    y: (i, target) => -1.25 * target.dataset.s,
   });
 }
 
@@ -31,13 +31,12 @@ if(screen.width <=960){
           defaults:{duration: 1, ease:'none'}
         })
           .to(box, {
-          y: (i, target) => -2 * target.dataset.s,
+          y: (i, target) => -2.5 * target.dataset.s,
         });
       });
 }
-
 })
-
+//initialize slider
 
 new Glide(".glide", {
   type: "carousel",
@@ -47,4 +46,26 @@ new Glide(".glide", {
   keyboard: true,
   perView: 1.2,
   focusAt: "center",
+
 }).mount();
+
+//Script for equal reason cards heights
+
+
+if (screen.width <= 960){
+
+
+function normaliseSlideHeight(selector) {
+
+  const slides = document.querySelectorAll(selector);
+  const slideHeights = [];
+
+  slides.forEach((slide) => slideHeights.push(slide.scrollHeight));
+
+  const tallestSlideHeight = Math.max(...slideHeights);
+
+  slides.forEach((slide) => slide.style.minHeight = tallestSlideHeight + 'px');
+}
+
+setTimeout(() => { normaliseSlideHeight('.reason__card'); }, 75);
+}
