@@ -51,6 +51,9 @@ main p {
   font-weight: 400;
   margin: 1em 0;
 }
+main li {
+  margin-bottom: 0;
+}
 
 a {
   text-decoration: none;
@@ -60,6 +63,11 @@ a {
 img {
   max-width: 100%;
   border: none;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
 }
 
 .primary__btn {
@@ -213,18 +221,22 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
-  margin-top: 1rem;
   padding-left: 0;
-  margin: 0;
   max-width: 352px;
   margin: 0 auto;
+}
+.hero__nav li {
+  margin-bottom: 0;
+  line-height: 24px;
 }
 
 .hero__nav li::before {
   content: "|";
   color: white;
+  font-weight: normal;
 }
 .hero__nav li:first-child::before {
   content: "";
@@ -366,6 +378,7 @@ img {
   font-size: 1.3rem;
   margin-top: 0;
   margin-top: -24px;
+  line-height: normal;
 }
 .reason__card__text {
   color: white;
@@ -437,6 +450,7 @@ img {
 
 .started__image {
   padding: 0 22px;
+  font-size: 0;
 }
 .started__content {
   margin-top: 48px;
@@ -454,7 +468,24 @@ img {
   letter-spacing: 2px;
   font-weight: bold;
   margin-top: 26px;
+  line-height: normal;
 }
+
+.thepeople {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.thepeople iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /*-- Where did yaymaker go --*/
 .whereym {
   background-image: url("./images/whereYM-bg.png");
@@ -553,7 +584,7 @@ img {
     display: block;
   }
   .primary__btn {
-    font-size: 16px;
+    font-size: 14px;
     padding: 12px 22px;
   }
 
@@ -632,6 +663,9 @@ img {
     max-width: 1164px;
     margin: 0 auto;
   }
+  .hero__nav li {
+    line-height: 1;
+  }
   .hero__nav li a {
     padding: 0 2rem;
   }
@@ -676,6 +710,12 @@ img {
     margin-left: 0;
   }
   /* Vibe section */
+
+  #vibe {
+    position: relative;
+    top: -32px;
+  }
+
   .vibe {
     margin-top: 60px;
   }
@@ -717,7 +757,7 @@ img {
   }
   /*-- Reasons section --*/
   .reasons .container {
-    max-width: 1164px;
+    max-width: 100%;
   }
   .reasons .section__title {
     text-align: center;
@@ -737,7 +777,7 @@ img {
   .reason__card__image {
     padding: 0 1rem;
     width: 50%;
-    text-align: center;
+    text-align: right;
   }
   .reason__card--img {
     margin-bottom: -2.5rem;
@@ -751,7 +791,6 @@ img {
     margin-top: -3px;
   }
   .reason__card__title {
-    margin-top: 1rem;
     font-size: 2.4rem;
     margin-top: -6px;
     min-width: 420px;
@@ -785,6 +824,9 @@ img {
     max-width: 220px;
   }
   /*--Who started --*/
+  .started .container {
+    padding-bottom: 0;
+  }
   .started .section__title {
     margin-bottom: 80px;
     margin-top: 80px;
@@ -813,6 +855,7 @@ img {
   .started__content::before {
     top: -25px;
   }
+
   /*-- Where did yaymaker go --*/
   .whereym {
     margin-top: 80px;
