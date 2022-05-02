@@ -475,6 +475,7 @@ img {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
+  padding-bottom: 55px;
 }
 
 .thepeople iframe {
