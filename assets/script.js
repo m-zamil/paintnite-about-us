@@ -44,7 +44,7 @@ new Glide(".glide", {
   autoplay: 4000,
   hoverpause: true,
   keyboard: true,
-  perView: 1.2,
+  perView: 1.26,
   focusAt: "center",
 
 }).mount();
