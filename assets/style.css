@@ -22,11 +22,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
 main *,
 main *::before,
 main *::after {
   box-sizing: border-box;
 }
+
 h1 {
   font-family: Roboto;
   font-weight: 300;
@@ -51,6 +53,7 @@ main p {
   font-weight: 400;
   margin: 1em 0;
 }
+
 main li {
   margin-bottom: 0;
 }
@@ -63,11 +66,15 @@ a {
 img {
   max-width: 100%;
   border: none;
-  image-rendering: -moz-crisp-edges; /* Firefox */
-  image-rendering: -o-crisp-edges; /* Opera */
-  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
 }
 
 .primary__btn {
@@ -81,6 +88,7 @@ img {
   line-height: 18px;
   margin-top: 1.5rem;
 }
+
 .btn--d {
   display: none;
 }
@@ -88,9 +96,11 @@ img {
 .bold {
   font-weight: bold;
 }
+
 .italic {
   font-style: italic;
 }
+
 .u {
   text-decoration: underline;
 }
@@ -98,27 +108,35 @@ img {
 .text-blue {
   color: var(--blue);
 }
+
 .text-golden {
   color: var(--golden);
 }
+
 .text-pink {
   color: var(--pink);
 }
+
 .text-grey {
   color: var(--grey);
 }
+
 .bg--pink {
   background-color: var(--pink);
 }
+
 .bg--grey {
   background-color: var(--grey);
 }
+
 .bg--green {
   background-color: var(--green);
 }
+
 .bg--blue {
   background-color: var(--blue);
 }
+
 .bg--white {
   background-color: white;
 }
@@ -141,6 +159,7 @@ img {
   line-height: 1;
   margin: 0.8em 0;
 }
+
 .section__subtitle {
   font-size: 14px;
   max-width: 352px;
@@ -153,6 +172,7 @@ img {
 .hero {
   padding: 0;
 }
+
 .hero .container {
   max-width: 100%;
   padding: 0;
@@ -165,6 +185,7 @@ img {
   margin: 0;
   padding: 0;
 }
+
 .hero__content {
   order: 2;
   position: relative;
@@ -182,6 +203,7 @@ img {
   margin-bottom: 40px;
   z-index: 1;
 }
+
 .hero__subtitle {
   font-size: 14px;
   font-weight: bold;
@@ -191,6 +213,7 @@ img {
   margin: 0 auto 22px;
   padding: 0 32px;
 }
+
 .hero__subtitle:last-child {
   margin-bottom: 0;
   border-bottom: 1px solid #fef13a;
@@ -202,6 +225,7 @@ img {
 .hero .hero__video {
   font-size: 0;
 }
+
 .hero .hero__video video {
   max-width: 100%;
   max-height: 400px;
@@ -209,6 +233,7 @@ img {
   object-fit: cover;
   height: 200px;
 }
+
 /*-- -hero nav--*/
 
 .hero__nav {
@@ -228,6 +253,7 @@ img {
   max-width: 352px;
   margin: 0 auto;
 }
+
 .hero__nav li {
   margin-bottom: 0;
   line-height: 24px;
@@ -238,9 +264,11 @@ img {
   color: white;
   font-weight: normal;
 }
+
 .hero__nav li:first-child::before {
   content: "";
 }
+
 .hero__nav li a {
   color: white;
   font-weight: bold;
@@ -249,6 +277,7 @@ img {
   padding: 0 8px;
   transition: all 300ms;
 }
+
 .hero__nav a:hover {
   color: black;
 }
@@ -258,31 +287,38 @@ img {
   overflow-x: clip;
   padding-bottom: 2rem;
 }
+
 .what .container {
   position: relative;
   max-width: 380px;
 }
+
 .what__top-image {
   position: absolute;
   width: 200px;
   right: -52px;
   top: -50px;
 }
+
 .what__images {
   display: none;
 }
+
 .what .section__title {
   text-align: left;
   line-height: 1.3;
 }
+
 .what .section__subtitle {
   line-height: 1.3;
 }
+
 /*-- The vibe section --*/
 .vibe {
   text-align: right;
   position: relative;
 }
+
 .vibe::after {
   content: "";
   position: absolute;
@@ -293,6 +329,7 @@ img {
   bottom: 15%;
   z-index: -2;
 }
+
 .vibe .container::after {
   content: "";
   position: absolute;
@@ -305,6 +342,7 @@ img {
   height: 183px;
   background-repeat: no-repeat;
 }
+
 .vibe .section__title,
 .vibe .section__subtitle {
   text-align: right;
@@ -313,38 +351,46 @@ img {
 .vibe .section__subtitle {
   line-height: 1.3;
 }
+
 .vibe__image__wrapper {
   display: flex;
   justify-content: space-between;
 }
+
 .vibe__image__wrapper img {
   width: 200px;
   width: 30%;
 }
+
 .vibe__image__wrapper img:last-child {
   margin-right: 0;
 }
+
 .vibe__image {
   margin-top: 96px;
   position: relative;
 }
+
 /*-- Reasons section --*/
 .reasons .container {
   max-width: 1164px;
   padding-left: 0;
   padding-right: 0;
 }
+
 .reasons .section__title {
   text-align: left;
   max-width: 312px;
   margin: 36px auto;
 }
+
 .reason__card {
   border-radius: 20px;
   color: white;
   margin: 2rem auto 0;
   max-width: 350px;
 }
+
 .reason__card__image {
   text-align: center;
 }
@@ -352,27 +398,35 @@ img {
 .reason__card--img {
   margin-top: -2rem;
 }
+
 .reason__card.card-1 {
   background-color: #ed5a9c;
 }
+
 .reason__card.card-2 {
   background-color: #f79d31;
 }
+
 .reason__card.card-3 {
   background-color: #b7d158;
 }
+
 .reason__card.card-4 {
   background-color: #078e8e;
 }
+
 .reason__card.card-5 {
   background-color: #cac7e4;
 }
+
 .reason__card.card-6 {
   background-color: #00abc8;
 }
+
 .reason__card__content {
   padding: 0 7% 2rem;
 }
+
 .reason__card__title {
   color: white;
   font-size: 1.3rem;
@@ -380,16 +434,19 @@ img {
   margin-top: -24px;
   line-height: normal;
 }
+
 .reason__card__text {
   color: white;
   font-size: 14px;
   line-height: 1.3;
   padding-bottom: 1rem;
 }
+
 .reason__card__text a {
   text-decoration: underline;
   color: white;
 }
+
 .reason__card__text a:hover {
   color: white;
 }
@@ -401,10 +458,12 @@ img {
   justify-content: center;
   text-align: center;
 }
+
 .numbers__card {
   max-width: 250px;
   margin-bottom: 1rem;
 }
+
 .numbers__card__image {
   width: 220px;
 }
@@ -415,28 +474,35 @@ img {
   margin: 0;
   line-height: 34px;
 }
+
 .numbers__card.card-1 .numbers__card__title {
   color: #cac8e3;
 }
+
 .numbers__card.card-2 .numbers__card__title {
   color: #ea5b9e;
 }
+
 .numbers__card.card-3 .numbers__card__title {
   color: #b8d04c;
 }
+
 .numbers__card.card-4 .numbers__card__title {
   color: #f49c1e;
 }
+
 .numbers__card__subtitle {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 3px;
 }
+
 /*-- Who started PN --*/
 
 .started {
   position: relative;
 }
+
 .started::after {
   content: "";
   position: absolute;
@@ -452,10 +518,12 @@ img {
   padding: 0 22px;
   font-size: 0;
 }
+
 .started__content {
   margin-top: 48px;
   position: relative;
 }
+
 .started__content::before {
   content: url(./images/quote-mark.png);
   position: absolute;
@@ -463,12 +531,17 @@ img {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .started .author__title {
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: bold;
   margin-top: 26px;
   line-height: normal;
+}
+
+#thepeople .section__title {
+  line-height: 1.2;
 }
 
 .thepeople {
@@ -486,6 +559,7 @@ img {
   height: 100%;
   border: 0;
 }
+
 .join {
   text-align: center;
   padding: 32px 0 0;
@@ -505,6 +579,7 @@ img {
   max-width: 550px;
   padding-bottom: 30px;
 }
+
 .whereym .container::after {
   content: "";
   display: block;
@@ -531,6 +606,7 @@ img {
   margin-top: 14px;
   margin-bottom: 28px;
 }
+
 .whereym .section__subtitle {
   text-align: left;
   margin-left: 0;
@@ -539,6 +615,7 @@ img {
   z-index: 2;
   position: relative;
 }
+
 .whereym .primary__btn {
   background-color: white;
   color: var(--blue);
@@ -546,6 +623,7 @@ img {
   z-index: 2;
   position: relative;
 }
+
 /*-- Responsive styles --*/
 
 @media (min-width: 420px) {
@@ -562,6 +640,7 @@ img {
     font-size: 3.5rem;
     margin-top: -35px;
   }
+
   .vibe .container::after {
     content: "";
     position: absolute;
@@ -582,12 +661,15 @@ img {
     margin: 1rem auto;
     font-size: 16px;
   }
+
   .btn--m {
     display: none;
   }
+
   .btn--d {
     display: block;
   }
+
   .primary__btn {
     font-size: 14px;
     padding: 12px 22px;
@@ -598,19 +680,23 @@ img {
     margin: 0 16px;
     margin: 0 auto;
   }
+
   /* Hero section */
 
   .hero .container {
     max-width: 100%;
     padding: 0;
   }
+
   .hero__wrapper {
     flex-direction: row;
   }
+
   .hero__content__wrapper {
     max-width: 582px;
     margin-left: auto;
   }
+
   .hero__content {
     order: 1;
     flex: 1;
@@ -618,6 +704,7 @@ img {
     padding-bottom: 6rem;
     position: relative;
   }
+
   .hero__content::after {
     content: "";
     display: block;
@@ -627,6 +714,7 @@ img {
     width: 100%;
     background-color: var(--green);
   }
+
   .hero .hero__title {
     font-size: 5rem;
     line-height: 0.85;
@@ -638,25 +726,30 @@ img {
     margin-right: auto;
     position: relative;
   }
+
   .hero__subtitle {
     padding: 0;
     max-width: 350px;
     font-size: 18px;
   }
+
   .hero__subtitle:last-child {
     margin-bottom: 22px;
     border-bottom: 0;
     padding-bottom: 0;
   }
+
   .hero .hero__video {
     order: 2;
     flex: 1;
     width: 50%;
   }
+
   .hero .hero__video video {
     max-height: 505px;
     height: 100%;
   }
+
   .hero__nav {
     background-color: transparent;
     padding: 0;
@@ -664,16 +757,20 @@ img {
     position: relative;
     z-index: 3;
   }
+
   .hero__nav ul {
     max-width: 1164px;
     margin: 0 auto;
   }
+
   .hero__nav li {
     line-height: 1;
   }
+
   .hero__nav li a {
     padding: 0 2rem;
   }
+
   /* what is PN section*/
   .what {
     background-image: url(./images/ellipse.png);
@@ -682,6 +779,7 @@ img {
     background-size: auto;
     padding-bottom: 0;
   }
+
   .what .container {
     max-width: 1164px;
     display: flex;
@@ -692,6 +790,7 @@ img {
     background-size: 450px;
     padding-bottom: 24px;
   }
+
   .what__top-image {
     display: none;
   }
@@ -702,18 +801,22 @@ img {
     position: relative;
     z-index: 3;
   }
+
   .what__content {
     flex: 1;
     margin-left: 32px;
     padding-top: 75px;
   }
+
   .what .section__title {
     margin-bottom: 18px;
   }
+
   .what .section__subtitle {
     max-width: 352px;
     margin-left: 0;
   }
+
   /* Vibe section */
 
   #vibe {
@@ -735,10 +838,12 @@ img {
     background-image: url("./images/ellipse-1.png");
     background-repeat: no-repeat;
   }
+
   .vibe .container {
     display: flex;
     align-items: center;
   }
+
   .vibe .container::after {
     content: "";
     right: 0;
@@ -752,23 +857,28 @@ img {
     height: 456px;
     background-repeat: no-repeat;
   }
+
   .vibe__content {
     flex: 1;
     max-width: 340px;
     margin: 0 10%;
   }
+
   .vibe__image {
     flex: 1.2;
   }
+
   /*-- Reasons section --*/
   .reasons .container {
     max-width: 100%;
   }
+
   .reasons .section__title {
     text-align: center;
     max-width: 700px;
     margin: 36px auto;
   }
+
   .reason__card {
     display: flex;
     max-width: 100%;
@@ -784,17 +894,20 @@ img {
     width: 50%;
     text-align: right;
   }
+
   .reason__card--img {
     margin-bottom: -2.5rem;
     max-width: 450px;
     margin-left: auto;
   }
+
   .reason__card__content {
     width: 50%;
     padding: 0 34px 0 0;
     align-self: center;
     margin-top: -3px;
   }
+
   .reason__card__title {
     font-size: 2.4rem;
     margin-top: -6px;
@@ -811,44 +924,55 @@ img {
   .reasons .glide__bullets {
     bottom: 5em;
   }
+
   .glide__bullet {
     width: 13px;
     height: 13px;
   }
+
   /*-- The numbers --*/
   .thenumbers {
     background-color: var(--off-white);
   }
+
   .thenumbers .section__title {
     margin-bottom: 50px;
   }
+
   .numbers__card__wrapper {
     justify-content: space-around;
   }
+
   .numbers__card__image {
     max-width: 220px;
   }
+
   /*--Who started --*/
   .started .container {
     padding-bottom: 0;
   }
+
   .started .section__title {
     margin-bottom: 80px;
     margin-top: 80px;
   }
+
   .started::after {
     display: none;
   }
+
   .started__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .started__image {
     width: 50%;
     max-width: 550px;
     padding: 0;
   }
+
   .started__content {
     width: 50%;
     max-width: 536px;
@@ -857,9 +981,16 @@ img {
     padding-bottom: 32px;
     background-color: var(--off-white);
   }
+
   .started__content::before {
     top: -25px;
   }
+
+  #thepeople .section__title {
+    line-height: 1.3;
+    margin: 64px auto;
+  }
+
   .join {
     text-align: center;
     padding: 32px 0 0;
@@ -874,6 +1005,7 @@ img {
     padding-bottom: 32px;
     max-width: 960px;
   }
+
   .whereym .container::after {
     right: 0;
     left: auto;
@@ -881,9 +1013,11 @@ img {
     height: 330px;
     background-size: 100%;
   }
+
   .whereym .section__title {
     max-width: 100%;
   }
+
   .whereym .section__subtitle {
     max-width: 610px;
   }

@@ -69,3 +69,7 @@ function normaliseSlideHeight(selector) {
 
 setTimeout(() => { normaliseSlideHeight('.reason__card'); }, 75);
 }
+
+function scrollIntoView(selectorId) {
+  document.getElementById(selectorId).scrollIntoView();
+} 
